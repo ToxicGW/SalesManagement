@@ -115,3 +115,31 @@ FOREIGN KEY(order_id) REFERENCES Orders(order_id)
 
 ALTER TABLE OrderDetails 
 ADD CONSTRAINT orderdetails_item_id_foreign FOREIGN KEY(item_id) REFERENCES Items(item_id);
+
+-- 7. Adding new column (Currency Indicator)
+ALTER TABLE Items
+ADD Currency varchar(4);
+
+UPDATE Items
+SET Currency= "TL";
+
+UPDATE Items
+SET Currency= "USD"
+WHERE item_id IN(2204,2207,2208,2209,2210);
+
+
+-- 8. Memory utilization by limiting the amount of characters
+ALTER TABLE Customers
+MODIFY phone varchar(15);
+
+ALTER TABLE suppliers
+MODIFY phone varchar(15);
+
+ALTER TABLE Shippers
+MODIFY phone varchar(15);
+
+ALTER TABLE Employees
+MODIFY role varchar(32);
+
+ALTER TABLE suppliers
+MODIFY email varchar(32);
