@@ -1,5 +1,5 @@
 -- DATA QUERY LANGUAGE (DQL)
--- Difficulty Level of queries goes higher as you move on 
+-- NOTE: Query structure scales in complexity from fundamentals to advanced relational aggregations, set operations and subqueries.
 
 
 
